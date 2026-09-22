@@ -17,10 +17,11 @@ class Item:
         """ returns the name of the class instance as  self.__class__.__name__      """
         return "Item"
     def __str__(self):
-        """ returns string like an object of type Item with id ### """
+        """ wave 3: returns string like an object of type Item with id ### """
         item_id = self.id
         item = self.get_category()
         return f" An object of type{item} with id {item_id}."
+    
     def condition_description(self):
             
         if self.condition <= 1:
