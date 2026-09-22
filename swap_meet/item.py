@@ -26,14 +26,13 @@ class Item:
     def condition_description(self):
         """ Wave5 : returns a description of an item's condition """ 
         
-        if self.condition <= 1:
-            return "Heavily Used"
-        elif self.condition <= 2:
-            return "Pretty Used"
-        elif self.condition <= 3:
+        if 4 <= self.condition <= 5:
+            return "Like New!"
+        elif 3 <= self.condition < 4:
+            return "Rarely Used!"
+        elif 2 <= self.condition < 3:
             return "Decent Condition"
-        elif self.condition <= 4:
-            return "Good Condition"
+        elif 1 <= self.condition < 2:
+            return "Pretty Used"
         else:
-            return "Rarely Used"
-        
+            return "Pretty Bad"

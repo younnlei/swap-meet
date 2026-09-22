@@ -57,3 +57,49 @@ class Vendor:
             return False
         self.inventory[0], other_vendor.inventory[0] = other_vendor.inventory[0], self.inventory[0]
         return True
+
+    def get_by_category(self, category):
+
+        """ wave6; provides category besed item management and swapping between vendors
+        Methods: get_by_category() returns all items in the category.
+        get_best_by_category() returns the item with very good condition or None.
+        swap_best_bhy_category() swaps best matching items and returns True ,if no match None
+        """
+        category_list = []
+        if not category:
+            return category_list
+        for item in self.inventory:
+            if item.get_category() == category:
+                category_list.append(item)
+        return category_list
+
+    def get_best_by_category(self,category):
+        """
+        Returns the item with the highest condition in the given category.
+        Returns None if no items in that category exist.
+        """
+        category_list = self.get_by_category(category)
+
+        if not category_list:
+            return None
+
+        best_item = category_list[0]
+
+        for item in category_list:
+            if item.condition > best_item.condition:
+                best_item = item
+        return best_item
+
+    def swap_best_by_category(self, other_vendor, my_priority, their_priority):
+        """
+        Swaps the best item of the specified categories between self and other_vendor.
+        Returns True if swap is successful, or False if either item is not found.
+        """
+        my_best_item = self.get_best_by_category(their_priority)
+        their_best = other_vendor.get_best_by_category(my_priority)
+
+        if not my_best_item or not their_best:
+            return False 
+            
+        self.swap_items(other_vendor, my_best_item, their_best)
+        return True
