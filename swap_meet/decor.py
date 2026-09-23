@@ -13,4 +13,4 @@ class Decor(Item):
         message = super().__str__()
         width = self.width
         length = self.length
-        return f" {message}. It takes up {width} by {length} sized space."
+        return f"{message} It takes up a {width} by {length} sized space."

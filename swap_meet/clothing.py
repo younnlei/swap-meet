@@ -11,10 +11,11 @@ class Clothing(Item):
 
     def get_category(self):
         return "Clothing"
+    
     def __str__(self):
         message = super().__str__()
-        fabric = self.fabric 
-        return f" {message}. It is made from {fabric} fabric."
+        fabric = self.fabric
+        return f"{message} It is made from {fabric} fabric."
 
 
 
