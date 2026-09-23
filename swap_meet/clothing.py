@@ -15,7 +15,7 @@ class Clothing(Item):
     def __str__(self):
         message = super().__str__()
         fabric = self.fabric
-        return f"{message} It is made from {fabric} fabric."
+        return f"{message}It is made from {fabric} fabric."
 
 
 
