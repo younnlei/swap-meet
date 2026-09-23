@@ -12,7 +12,7 @@ class Electronics(Item):
     def __str__(self):
         message = super().__str__()
         type = self.type
-        return f" {message}. This is a {type} device."
+        return f"{message} This is a {type} device."
         
         
         
