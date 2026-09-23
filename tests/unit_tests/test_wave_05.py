@@ -21,7 +21,7 @@ def test_clothing_has_expected_category_and_custom_id():
 def test_clothing_has_expected_default_to_str():
     clothing = Clothing(id=TEST_CUSTOM_ID)
     expected_str = (
-        f"An object of type Clothing with id {TEST_CUSTOM_ID}. "
+        f"An object of type Clothing with id {TEST_CUSTOM_ID}."
         "It is made from Unknown fabric."
     )
     assert str(clothing) == expected_str
@@ -30,7 +30,7 @@ def test_clothing_has_expected_default_to_str():
 def test_clothing_has_expected_to_str_with_custom_fabric():
     clothing = Clothing(id=TEST_CUSTOM_ID, fabric="Pinstriped")
     expected_str = (
-        f"An object of type Clothing with id {TEST_CUSTOM_ID}. "
+        f"An object of type Clothing with id {TEST_CUSTOM_ID}."
         "It is made from Pinstriped fabric."
     )
     assert str(clothing) == expected_str
@@ -51,7 +51,7 @@ def test_decor_has_expected_category_and_custom_id():
 def test_decor_has_expected_default_to_str():
     decor = Decor(id=TEST_CUSTOM_ID)
     expected_str = (
-        f"An object of type Decor with id {TEST_CUSTOM_ID}. "
+        f"An object of type Decor with id {TEST_CUSTOM_ID}."
         "It takes up a 0 by 0 sized space."
     )
     assert str(decor) == expected_str
@@ -60,7 +60,7 @@ def test_decor_has_expected_default_to_str():
 def test_decor_has_expected_to_str_with_custom_size():
     decor = Decor(id=TEST_CUSTOM_ID, width=3, length=12)
     expected_str = (
-        f"An object of type Decor with id {TEST_CUSTOM_ID}. "
+        f"An object of type Decor with id {TEST_CUSTOM_ID}."
         "It takes up a 3 by 12 sized space."
     )
     assert str(decor) == expected_str
@@ -81,7 +81,7 @@ def test_electronics_has_expected_category_and_custom_id():
 def test_electronics_has_expected_default_to_str():
     electronics = Electronics(id=TEST_CUSTOM_ID)
     expected_str = (
-        f"An object of type Electronics with id {TEST_CUSTOM_ID}. "
+        f"An object of type Electronics with id {TEST_CUSTOM_ID}."
         "This is a Unknown device."
     )
     assert str(electronics) == expected_str
@@ -90,7 +90,7 @@ def test_electronics_has_expected_default_to_str():
 def test_electronics_has_expected_to_str_with_custom_type():
     electronics = Electronics(id=TEST_CUSTOM_ID, type="Mobile Phone")
     expected_str = (
-        f"An object of type Electronics with id {TEST_CUSTOM_ID}. "
+        f"An object of type Electronics with id {TEST_CUSTOM_ID}."
         "This is a Mobile Phone device."
     )
     assert str(electronics) == expected_str
