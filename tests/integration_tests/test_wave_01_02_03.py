@@ -2,8 +2,8 @@ import pytest
 from swap_meet.vendor import Vendor
 from swap_meet.item import Item
 
-@pytest.mark.skip
-@pytest.mark.integration_test
+#@pytest.mark.skip
+#@pytest.mark.integration_test
 def test_integration_wave_01_02_03():
     # make a vendor
     vendor = Vendor()
