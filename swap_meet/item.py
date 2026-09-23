@@ -1,9 +1,10 @@
 import uuid
 
 class Item:
-    """ Represents an item with unique ID during a swap meet
-    attributes: id(int)
-    method: get_category()
+    """
+    Wave02: Represents an item with unique ID during a swap meet.
+    attributes: id(int) and condition(float,default to 0).
+    method: get_category(): returns a string with the class name.
     """
     def __init__(self,id=None, condition=0):
         if not id:
@@ -14,17 +15,22 @@ class Item:
         self.condition = condition
 
     def get_category(self):
-        """ returns the name of the class instance as  self.__class__.__name__      """
+        """ returns the name of the class instance as  self.__class__.__name__  """
+
         return "Item"
     
     def __str__(self):
-            """Wave 3: returns string like an object of type Item with id ###"""
-            item_id = self.id
-            item = self.get_category()
-            return f"An object of type {item} with id {item_id}."
+        """ Wave03: returns string like an object of type Item with id ### """
+        item_id = self.id
+        item = self.get_category()
+
+        return f"An object of type {item} with id {item_id}."
     
     def condition_description(self):
-        """ Wave5 : returns a description of an item's condition """ 
+        """ 
+        Wave05 : returns a description of an item's condition 
+        Method: condition_description(): provides string describing the condition.
+        """ 
         
         if 4 <= self.condition <= 5:
             return "Like New!"

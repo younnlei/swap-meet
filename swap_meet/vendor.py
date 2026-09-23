@@ -5,10 +5,12 @@ from swap_meet.electronics import Electronics
 
 
 class Vendor:
-    """ mangaing a vendor's inventory of items.
+    """ 
+    Wave01: represenst mangaing a vendor's inventory of items.
     attributes: inventory(list), default empty list.
     method : add(item): adds an item to the inventory. 
-    reove (item) from the inventory. """
+    remove (item) remove and returns the item or Flase if not found.
+    """
 
     def __init__(self, inventory=None):
         if not inventory:
@@ -27,7 +29,11 @@ class Vendor:
         return False
 
     def get_by_id(self, id):
-        """Return the item with the matching ID."""
+        """
+        Wave02: Return the item with the matching ID.
+        Method: get_by_id(): searches inventory for matching ID and returns the item if found,
+        otherwise returns None.
+        """
 
         for item in self.inventory:
             if item.id == id:
@@ -35,7 +41,8 @@ class Vendor:
         return None
     
     def swap_items(self, other_vendor, my_item, their_item):
-        """ Wave 3; handles swapping items between two vendors
+        """ 
+        Wave03; handles swapping items between two vendors
         Method: swap_items() echanges itema between inventories.
         returns False if either item is not in the inventory; otherwise complets the swap.
         """
@@ -49,7 +56,8 @@ class Vendor:
     
     def swap_first_item(self, other_vendor):
 
-        """ wave4: swaps the first item between two vendors
+        """
+        wave4: swaps the first item between two vendors
         Method : swap_first_item() exchanges the first item of each inventory.
         returns True if swap is successful; returns False if eitheir inventory is empty.
         """
@@ -60,7 +68,8 @@ class Vendor:
 
     def get_by_category(self, category):
 
-        """ wave6; provides category besed item management and swapping between vendors
+        """
+        wave6; provides category besed item management and swapping between vendors
         Methods: get_by_category() returns all items in the category.
         get_best_by_category() returns the item with very good condition or None.
         swap_best_bhy_category() swaps best matching items and returns True ,if no match None
