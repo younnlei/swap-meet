@@ -21,9 +21,6 @@ class Item:
     
     def __str__(self):
         """ Wave03: returns string like an object of type Item with id ### """
-        item_id = self.id
-        item = self.get_category()
-
         return f"An object of type {item} with id {item_id}."
     
     def condition_description(self):
